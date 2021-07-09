@@ -1,10 +1,11 @@
 import * as React from 'react';
-import {ScrollView, Text, SafeAreaView, TouchableOpacity} from 'react-native';
+import {ScrollView, Text, SafeAreaView} from 'react-native';
 import LeadsProfile from './leadsProfile';
 import {createStackNavigator} from '@react-navigation/stack';
 import {LeadsData} from '../../resources/db/db.json';
 import styles from '../../resources/styles/styles';
 import AddLeads from './addLeads';
+import PrimaryButton from '../../components/atoms/primaryButton';
 
 const Stack = createStackNavigator();
 
@@ -27,16 +28,15 @@ function Leads({navigation}) {
             {lead.firstname}
           </Text>
         ))}
-        <TouchableOpacity
-          style={styles.addButton}
+        <PrimaryButton
           onPress={() => {
             // Invoke AddLeads component
             navigation.navigate({
               name: 'AddLeads',
             });
-          }}>
-          <Text style={styles.mediumTextWhite}>Add Lead</Text>
-        </TouchableOpacity>
+          }}
+          text="Add Leads"
+        />
       </ScrollView>
     </SafeAreaView>
   );
