@@ -4,6 +4,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import ServicesScreen from './src/pages/services';
 import SettingsScreen from './src/pages/settings';
 import LeadsScreen from './src/pages/leads';
+import Icon from 'react-native-ionicons';
 
 const Tab = createBottomTabNavigator();
 

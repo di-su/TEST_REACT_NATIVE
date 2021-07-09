@@ -58,6 +58,9 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     padding: 10,
   },
+  title: {
+    textDecorationLine: 'underline',
+  },
 });
 
 export default styles;

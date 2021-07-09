@@ -2,12 +2,12 @@ import * as React from 'react';
 import {Text, SafeAreaView} from 'react-native';
 import styles from '../../resources/styles/styles';
 
-function SettingsScreen() {
+function ServiceProfile() {
   return (
     <SafeAreaView style={{flex: 1}}>
-      <Text style={styles.bigText}>Settings</Text>
+      <Text style={styles.bigText}>Service Profile</Text>
     </SafeAreaView>
   );
 }
 
-export default SettingsScreen;
+export default ServiceProfile;

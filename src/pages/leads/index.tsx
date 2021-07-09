@@ -13,6 +13,7 @@ const Stack = createStackNavigator();
 function Leads({navigation}) {
   return (
     <SafeAreaView style={{flex: 1}}>
+      <Text style={[styles.bigText, styles.title]}>Leads</Text>
       <ScrollView>
         {LeadsData.map(lead => (
           <Text
@@ -45,7 +46,10 @@ function Leads({navigation}) {
 function LeadsScreen() {
   return (
     <>
-      <Stack.Navigator>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
         {/* Render leads component */}
         <Stack.Screen name="Leads" component={Leads} />
         <Stack.Screen name="LeadsProfile" component={LeadsProfile} />
