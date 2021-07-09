@@ -49,6 +49,16 @@ const styles = StyleSheet.create({
     padding: 15,
     fontSize: 20,
   },
+  messageBox: {
+    backgroundColor: 'white',
+    height: 150,
+    borderColor: 'black',
+    marginLeft: 20,
+    marginRight: 20,
+    padding: 15,
+    paddingTop: 10,
+    fontSize: 25,
+  },
   serviceImage: {
     width: 100,
     height: 100,

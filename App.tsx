@@ -2,7 +2,7 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import ServicesScreen from './src/pages/services';
-import SettingsScreen from './src/pages/settings';
+import TextScreen from './src/pages/text';
 import LeadsScreen from './src/pages/leads';
 import Icon from 'react-native-ionicons';
 
@@ -14,7 +14,7 @@ export default function App() {
       <Tab.Navigator>
         <Tab.Screen name="Services" component={ServicesScreen} />
         <Tab.Screen name="Leads" component={LeadsScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
+        <Tab.Screen name="Text" component={TextScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
