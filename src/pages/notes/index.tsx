@@ -21,12 +21,12 @@ function NotesScreen() {
   const [note, setNote] = useState('');
   const [loading, setLoading] = useState(true);
   const [notes, setNotes] = useState([]);
-  const [hasLiked, setHasLiked] = useState(false);
+  const [hasPressed, setHasPressed] = useState(false);
 
   const progress = useRef(new Animated.Value(0)).current;
 
-  const handleLikeAnimation = () => {
-    const newValue = hasLiked ? 0 : 1;
+  const handleCatAnimation = () => {
+    const newValue = hasPressed ? 0 : 1;
 
     Animated.timing(progress, {
       toValue: newValue,
@@ -34,7 +34,7 @@ function NotesScreen() {
       useNativeDriver: true,
     }).start();
 
-    setHasLiked(!hasLiked);
+    setHasPressed(!hasPressed);
   };
 
   const ref = firestore().collection('notes');
@@ -92,7 +92,7 @@ function NotesScreen() {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-        <TouchableOpacity onPress={handleLikeAnimation}>
+        <TouchableOpacity onPress={handleCatAnimation}>
           <LottieView
             style={{width: 250, height: 250}}
             progress={progress}
